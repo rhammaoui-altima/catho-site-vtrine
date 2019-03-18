@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} - Accueil{% endblock %}
+
+{% block body %}
+
+    <!-- Content Row -->
+    <div class="row my-5">
+        {% for service in services %}
+            {% include 'common/_service_bloc.html.twig' with {service:service} %}
+        {% endfor %}
+    </div>
+    <!-- /.row -->
+
+{% endblock %}
